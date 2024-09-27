@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Poppins", sans-serif; /* Changed to a modern, clean font */
+  line-height: 1.6;
+  font-weight: 400;
+  min-height: 125vh;
+  color: rgb(245, 245, 245); /* Lighter text */
+  background: linear-gradient(
+    135deg,
+    #1a2a6c,
+    #b21f1f,
+    #fdbb2d
+  ); /* Gradient background */
+  background-size: cover;
+}
+
+a {
+  font-weight: 600;
+  color: #f6d32d; /* Updated to a bright yellow */
+  text-decoration: none;
+}
+
+button {
+  border-radius: 12px;
+  border: 0.4px solid transparent;
+  padding: 0.6em 1em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ffa600; /* Darker purple input background */
+  font-weight: bold;
+  margin: 10px 40px;
+  border: 3px solid black;
+  color: #000000;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #000000; /* Softer placeholder color */
+  opacity: 0.8;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffa600; /* Darker purple input background */
+  border: 3px solid black;
+
+  padding: 12px 30px;
+  margin: 10px 40px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 360px) {
+  .instructionBox,
+  .recipe-img,
+  .recipe-list {
+    flex-direction: column;
+    place-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .recipe-container {
+    flex-direction: column;
+    place-content: center;
+    margin-left: 40px;
+  }
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* Increased gap for better spacing */
+}
+
+.message-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-item.user {
+  justify-content: flex-end;
+}
+
+.message-item.other {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 0.6rem;
+  border-radius: 10px;
+}
+
+.message-bubble.user {
+  background-color: #484848; /* Darker user message bubble */
+  color: #fafafa; /* Lighter text */
+}
+
+.message-bubble.other {
+  background-color: #d4d4d4; /* Softer gray for others' message bubble */
+  color: #2c2c2c;
+}
+
+.message-avatar {
+  margin-right: 0.7rem; /* Increased margin for better spacing */
+}
